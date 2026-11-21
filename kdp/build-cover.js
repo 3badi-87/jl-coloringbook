@@ -54,7 +54,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
               -webkit-text-stroke: 5pt var(--ink); paint-order: stroke fill; }
   .blurb { margin: 0.12in auto 0; max-width: 6.6in; text-align: center; font-weight: 700; font-size: 13.5pt; line-height: 1.45; }
   .samples { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3in 0.4in; width: 4.6in; margin: 0.28in auto 0; }
-  .samples div { background: #fff; padding: 0.08in; border-radius: 0.1in; box-shadow: 0 0.06in 0.18in rgba(74,59,92,.22); }
+  .samples div { background: #fff; padding: 0.08in; }
   .samples div:nth-child(1) { transform: rotate(-3deg); } .samples div:nth-child(2) { transform: rotate(2.5deg); }
   .samples div:nth-child(3) { transform: rotate(2deg); }  .samples div:nth-child(4) { transform: rotate(-2.5deg); }
   .samples img { display: block; width: 100%; }
