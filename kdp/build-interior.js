@@ -21,15 +21,15 @@ const art = fs.readdirSync(ART).filter(f => f.endsWith('.svg')).sort();
 const blank = '<section class="page"></section>';
 const pages = [];
 
-// 1. Title page (+ blank back)
+// 1. This book belongs to (the cover already carries the title)
 pages.push(`<section class="page center">
-  <h1>Hammy <span>&amp;</span> Friends</h1>
-  <p class="sub">A Coloring Book for Kids</p>
-  <img class="title-art" src="${svgData('02-sunflower-seed.svg')}">
+  <h2>This book belongs to</h2>
+  <div class="name-line"></div>
+  <img class="belongs-art" src="${svgData('04-turtle-ride.svg')}">
   <img class="logo" src="data:image/png;base64,${fs.readFileSync(path.join(__dirname, 'brand', 'logo-bw.png')).toString('base64')}" alt="${AUTHOR}">
 </section>`);
 
-// 2. Copyright page
+// 2. Copyright page (back of page 1)
 pages.push(`<section class="page copyright">
   <p>Hammy &amp; Friends: A Coloring Book for Kids</p>
   <p>Copyright &copy; ${YEAR} ${AUTHOR}. All rights reserved.</p>
@@ -37,20 +37,13 @@ pages.push(`<section class="page copyright">
   <p>Coloring tip: each picture is printed on its own page. Slip a sheet of paper behind the page when using markers.</p>
 </section>`);
 
-// 3. This book belongs to (+ blank back)
-pages.push(`<section class="page center">
-  <h2>This book belongs to</h2>
-  <div class="name-line"></div>
-  <img class="belongs-art" src="${svgData('04-turtle-ride.svg')}">
-</section>`, blank);
-
-// 4. Color test page (+ blank back)
+// 3. Color test page (+ blank back)
 pages.push(`<section class="page center">
   <h2>Test Your Colors</h2>
   <div class="swatches">${'<div></div>'.repeat(30)}</div>
 </section>`, blank);
 
-// 5. Coloring pages, single-sided
+// 4. Coloring pages, single-sided
 for (const f of art) pages.push(`<section class="page art"><img src="${svgData(f)}"></section>`, blank);
 
 // KDP needs an even page count of at least 24
@@ -72,7 +65,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   .logo { width: 2.6in; margin-top: 0.35in; }
   h2 { font-family: Chewy, sans-serif; font-weight: 400; font-size: 44pt; margin: 0 0 0.3in; }
   .name-line { width: 5in; border-bottom: 3pt solid #000; height: 0.7in; margin-bottom: 0.4in; }
-  .belongs-art { width: 5.5in; }
+  .belongs-art { width: 5in; }
   .swatches { display: grid; grid-template-columns: repeat(5, 1.1in); gap: 0.2in; }
   .swatches div { height: 1.1in; border: 2.5pt solid #000; border-radius: 0.2in; }
   .copyright { display: flex; flex-direction: column; justify-content: flex-end; font-size: 10.5pt; line-height: 1.5; }

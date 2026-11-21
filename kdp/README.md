@@ -27,7 +27,7 @@ The cover is a separate file. Make it after the page count is final, because the
 ## Cover
 
 ```
-PAGES=46 BOOK_AUTHOR="Your Name" node kdp/build-cover.js
+PAGES=44 BOOK_AUTHOR="Your Name" node kdp/build-cover.js
 ```
 
 - Builds `hammy-and-friends-cover.pdf`: back, spine and front on one sheet, with 0.125 in bleed. The spine width is page count x 0.002252 in (white paper). Set `PAGES` to the interior's final page count.
