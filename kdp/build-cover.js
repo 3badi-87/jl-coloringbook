@@ -59,7 +59,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   .inner h2 { margin: 0; text-align: center; font-family: Chewy, sans-serif; font-weight: 400; font-size: 50pt; color: var(--peach);
               -webkit-text-stroke: 1.7pt var(--ink); paint-order: stroke fill; }
   .blurb { margin: 0.12in auto 0; max-width: 6.6in; text-align: center; font-weight: 700; font-size: 13.5pt; line-height: 1.45; }
-  .samples { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3in 0.4in; width: 4.9in; margin: 0.28in auto 0; }
+  .samples { display: grid; grid-template-columns: 1fr 1fr; gap: 0.28in 0.4in; width: 4.35in; margin: 0.25in auto 0; }
   .samples div { background: #fff; padding: 0.1in; border: 0.04in solid var(--ink); border-radius: 0.14in; }
   .samples div:nth-child(1) { transform: rotate(-3deg); box-shadow: 0.08in 0.08in 0 var(--pink); }
   .samples div:nth-child(2) { transform: rotate(2.5deg); box-shadow: 0.08in 0.08in 0 var(--mint); }
@@ -67,7 +67,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   .samples div:nth-child(4) { transform: rotate(-2.5deg); box-shadow: 0.08in 0.08in 0 var(--butter); }
   .samples img { display: block; width: 100%; }
   .features { position: absolute; left: 0; bottom: 0; padding: 0.12in 0.22in; font-weight: 800; font-size: 12.5pt; line-height: 1.6; }
-  .backlogo { position: absolute; left: 50%; bottom: 0.05in; transform: translateX(-30%); height: 0.55in; }
+  .backlogo { position: absolute; right: 0.1in; bottom: 1.32in; width: 1.8in; height: auto; }
   .barcode { position: absolute; right: 0; bottom: 0; width: 2in; height: 1.2in; background: #fff; }
 </style></head><body><div class="sheet">
   <div class="back"><div class="inner">
