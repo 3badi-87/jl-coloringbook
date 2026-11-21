@@ -33,3 +33,11 @@ PAGES=46 BOOK_AUTHOR="Your Name" node kdp/build-cover.js
 - Builds `hammy-and-friends-cover.pdf`: back, spine and front on one sheet, with 0.125 in bleed. The spine width is page count x 0.002252 in (white paper). Set `PAGES` to the interior's final page count.
 - Front art: `cover-art/front.png` (1760 x 2336 px from Canva). `front-preview.png` is only a fallback.
 - The back cover shows four interior pages as samples and leaves a white 2 x 1.2 in box at the bottom right, where KDP prints the barcode.
+
+## One-file version
+
+```
+python3 kdp/build-combined.py
+```
+
+Builds `hammy-and-friends-complete.pdf`: front cover, all interior pages, back cover, each 8.5 x 11 in. Use it for previewing, sharing or selling as a printable download. For the KDP paperback, upload the separate interior and cover files instead.
