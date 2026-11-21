@@ -12,7 +12,10 @@ const { chromium } = require('playwright');
 
 const ART = path.join(__dirname, 'art');
 const OUT = path.join(__dirname, 'hammy-and-friends-interior.pdf');
-const AUTHOR = process.env.BOOK_AUTHOR || 'Purple Dino';
+const AUTHOR = process.env.BOOK_AUTHOR || 'RoxoSky Books Co.';
+const LOGO_BW = 'data:image/png;base64,' + fs.readFileSync(path.join(__dirname, 'brand', 'logo-bw.png')).toString('base64');
+// small publisher footer at the bottom of every content page (blank backs stay blank)
+const footer = `<img class="footer" src="${LOGO_BW}" alt="${AUTHOR}">`;
 const YEAR = new Date().getFullYear();
 
 const svgData = f => 'data:image/svg+xml;base64,' + fs.readFileSync(path.join(ART, f)).toString('base64');
@@ -26,25 +29,28 @@ pages.push(`<section class="page center">
   <h2>This book belongs to</h2>
   <div class="name-line"></div>
   <img class="belongs-art" src="${svgData('04-turtle-ride.svg')}">
-  <img class="logo" src="data:image/png;base64,${fs.readFileSync(path.join(__dirname, 'brand', 'logo-bw.png')).toString('base64')}" alt="${AUTHOR}">
+  ${footer}
 </section>`);
 
 // 2. Copyright page (back of page 1)
 pages.push(`<section class="page copyright">
   <p>Hammy &amp; Friends: A Coloring Book for Kids</p>
+  <p>Published by ${AUTHOR}</p>
   <p>Copyright &copy; ${YEAR} ${AUTHOR}. All rights reserved.</p>
   <p>No part of this book may be reproduced in any form without written permission from the author, except for personal use by the purchaser.</p>
   <p>Coloring tip: each picture is printed on its own page. Slip a sheet of paper behind the page when using markers.</p>
+  ${footer}
 </section>`);
 
 // 3. Color test page (+ blank back)
 pages.push(`<section class="page center">
   <h2>Test Your Colors</h2>
   <div class="swatches">${'<div></div>'.repeat(30)}</div>
+  ${footer}
 </section>`, blank);
 
 // 4. Coloring pages, single-sided
-for (const f of art) pages.push(`<section class="page art"><img src="${svgData(f)}"></section>`, blank);
+for (const f of art) pages.push(`<section class="page art"><img class="pic" src="${svgData(f)}">${footer}</section>`, blank);
 
 // KDP needs an even page count of at least 24
 const count = pages.length;
@@ -62,16 +68,16 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   h1 span { font-size: 46pt; }
   .sub { font-size: 24pt; font-weight: 700; margin: 0.1in 0 0.3in; }
   .title-art { width: 4.8in; }
-  .logo { width: 2.6in; margin-top: 0.35in; }
+  .footer { position: absolute; left: 50%; bottom: 0.35in; transform: translateX(-50%); height: 0.42in; }
   h2 { font-family: Chewy, sans-serif; font-weight: 400; font-size: 44pt; margin: 0 0 0.3in; }
   .name-line { width: 5in; border-bottom: 3pt solid #000; height: 0.7in; margin-bottom: 0.4in; }
   .belongs-art { width: 5in; }
   .swatches { display: grid; grid-template-columns: repeat(5, 1.1in); gap: 0.2in; }
   .swatches div { height: 1.1in; border: 2.5pt solid #000; border-radius: 0.2in; }
-  .copyright { display: flex; flex-direction: column; justify-content: flex-end; font-size: 10.5pt; line-height: 1.5; }
+  .copyright { display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1.1in; font-size: 10.5pt; line-height: 1.5; }
   .copyright p { margin: 0 0 0.12in; max-width: 5.5in; }
-  .art { display: flex; align-items: center; justify-content: center; }
-  .art img { max-width: 100%; max-height: 100%; }
+  .art { display: flex; align-items: center; justify-content: center; padding-bottom: 0.95in; }
+  .art .pic { max-width: 100%; max-height: 100%; }
 </style></head><body>${pages.join('\n')}</body></html>`;
 
 (async () => {

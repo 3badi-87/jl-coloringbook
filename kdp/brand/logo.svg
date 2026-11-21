@@ -1,18 +1,16 @@
-<svg font-family="Chewy" xmlns="http://www.w3.org/2000/svg" width="1180" height="400" viewBox="-10 -10 1200 420"><g stroke="#3B1E5C" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
-    <path transform="translate(92 222) rotate(-55) scale(0.8)" d="M -22 10 C -20 -12 -8 -30 0 -32 C 8 -30 20 -12 22 10 Z" fill="#FFB547"/><path transform="translate(124 186) rotate(-40) scale(1)" d="M -22 10 C -20 -12 -8 -30 0 -32 C 8 -30 20 -12 22 10 Z" fill="#FFB547"/><path transform="translate(146 132) rotate(-25) scale(1.12)" d="M -22 10 C -20 -12 -8 -30 0 -32 C 8 -30 20 -12 22 10 Z" fill="#FFB547"/><path transform="translate(180 86) rotate(-12) scale(1.12)" d="M -22 10 C -20 -12 -8 -30 0 -32 C 8 -30 20 -12 22 10 Z" fill="#FFB547"/><path transform="translate(226 58) rotate(4) scale(1)" d="M -22 10 C -20 -12 -8 -30 0 -32 C 8 -30 20 -12 22 10 Z" fill="#FFB547"/>
-    <ellipse cx="170" cy="346" rx="36" ry="18" fill="#6D3FD9"/>
-    <path d="M45 225 C75 237 105 226 125 205 C140 150 170 70 250 58 C312 50 348 96 340 142 C335 176 310 196 282 200 C302 226 310 282 292 318 C270 352 150 354 118 318 C100 298 80 268 45 225 Z" fill="#8B5CF6"/>
-    <ellipse cx="262" cy="282" rx="30" ry="48" transform="rotate(-12 262 282)" fill="#DDD0FF" stroke-width="6"/>
-    <path d="M248 262 C256 260 262 262 266 266 M244 286 C252 284 260 286 264 290" fill="none" stroke-width="5"/>
-    <path d="M280 236 C298 230 314 236 314 248 C314 260 298 260 286 254" fill="#8B5CF6"/>
-    <ellipse cx="258" cy="348" rx="36" ry="18" fill="#6D3FD9"/>
-    <path d="M246 340 v10 M262 339 v12" fill="none" stroke-width="5"/>
-    <circle cx="288" cy="118" r="23" fill="#fff"/>
-    <circle cx="293" cy="121" r="13.5" fill="#2B1A4A" stroke="none"/>
-    <circle cx="288" cy="115" r="5.5" fill="#fff" stroke="none"/>
-    <circle cx="297" cy="128" r="2.5" fill="#fff" stroke="none"/>
-    <ellipse cx="286" cy="160" rx="15" ry="9" fill="#FF8FB1" stroke="none"/>
-    <path d="M306 164 C314 174 328 172 334 160" fill="none" stroke-width="7"/>
-    <circle cx="330" cy="122" r="3.5" fill="#3B1E5C" stroke="none"/>
-  </g><text x="400" y="262" text-anchor="start" font-family="Chewy" font-size="170" letter-spacing="2"
-    stroke="#3B1E5C" stroke-width="15.299999999999999" stroke-linejoin="round" paint-order="stroke fill"><tspan fill="#8B5CF6" dx="0">Purple</tspan><tspan fill="#FFB547" dx="42.5">Dino</tspan></text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="400" viewBox="-10 -10 1180 420"><defs><linearGradient id="g0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8E6BE0"/><stop offset="1" stop-color="#B79CF2"/></linearGradient>
+    <clipPath id="c0"><circle cx="200" cy="200" r="180"/></clipPath></defs>
+  <circle cx="200" cy="200" r="180" fill="url(#g0)"/>
+  <g clip-path="url(#c0)">
+    <path d="M150 70 A78 78 0 1 0 236 168 A62 62 0 1 1 150 70 Z" fill="#FFE9A8" stroke="#4A3B5C" stroke-width="8" stroke-linejoin="round"/>
+    <polygon points="272.0,70.0 277.8,84.0 292.9,85.2 281.4,95.1 284.9,109.8 272.0,101.9 259.1,109.8 262.6,95.1 251.1,85.2 266.2,84.0" fill="#FFF6D6" stroke="#4A3B5C" stroke-width="5" stroke-linejoin="round"/><polygon points="312.0,147.0 315.4,155.3 324.4,156.0 317.6,161.8 319.6,170.5 312.0,165.8 304.4,170.5 306.4,161.8 299.6,156.0 308.6,155.3" fill="#FFF6D6" stroke="#4A3B5C" stroke-width="5" stroke-linejoin="round"/><polygon points="318.0,221.0 320.9,228.0 328.5,228.6 322.7,233.5 324.5,240.9 318.0,236.9 311.5,240.9 313.3,233.5 307.5,228.6 315.1,228.0" fill="#FFF6D6" stroke="#4A3B5C" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M30 330 C40 290 80 280 106 296 C120 262 170 252 196 280 C220 256 270 262 280 296 C310 284 356 296 364 330 L364 420 L30 420 Z"
+      fill="#FFFFFF" stroke="#4A3B5C" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M130 318 C160 304 186 306 200 318 C214 306 240 304 270 318 L270 362 C240 350 214 352 200 362 C186 352 160 350 130 362 Z"
+      fill="#FFF6D6" stroke="#4A3B5C" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M200 318 V362" stroke="#4A3B5C" stroke-width="6"/>
+  </g>
+  <circle cx="200" cy="200" r="180" fill="none" stroke="#4A3B5C" stroke-width="12"/><text x="430" y="225" text-anchor="start" font-family="Chewy" font-size="170" letter-spacing="2" stroke="#4A3B5C" stroke-width="14.450000000000001" stroke-linejoin="round" paint-order="stroke fill">
+      <tspan fill="#8E6BE0">Roxo</tspan><tspan fill="#7FB8F0">Sky</tspan></text>
+    <text x="436" y="330.4" text-anchor="start" font-family="Nunito" font-weight="800"
+      font-size="61.199999999999996" letter-spacing="10.2" fill="#4A3B5C">BOOKS CO.</text></svg>
