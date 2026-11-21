@@ -12,7 +12,7 @@ const { chromium } = require('playwright');
 
 const ART = path.join(__dirname, 'art');
 const OUT = path.join(__dirname, 'hammy-and-friends-interior.pdf');
-const AUTHOR = process.env.BOOK_AUTHOR || 'Your Name';
+const AUTHOR = process.env.BOOK_AUTHOR || 'Purple Dino';
 const YEAR = new Date().getFullYear();
 
 const svgData = f => 'data:image/svg+xml;base64,' + fs.readFileSync(path.join(ART, f)).toString('base64');
@@ -26,14 +26,14 @@ pages.push(`<section class="page center">
   <h1>Hammy <span>&amp;</span> Friends</h1>
   <p class="sub">A Coloring Book for Kids</p>
   <img class="title-art" src="${svgData('02-sunflower-seed.svg')}">
-  <p class="author">${AUTHOR}</p>
+  <img class="logo" src="data:image/png;base64,${fs.readFileSync(path.join(__dirname, 'brand', 'logo-bw.png')).toString('base64')}" alt="${AUTHOR}">
 </section>`);
 
 // 2. Copyright page
 pages.push(`<section class="page copyright">
   <p>Hammy &amp; Friends: A Coloring Book for Kids</p>
   <p>Copyright &copy; ${YEAR} ${AUTHOR}. All rights reserved.</p>
-  <p>No part of this book may be reproduced in any form without written permission from the publisher, except for personal use by the purchaser.</p>
+  <p>No part of this book may be reproduced in any form without written permission from the author, except for personal use by the purchaser.</p>
   <p>Coloring tip: each picture is printed on its own page. Slip a sheet of paper behind the page when using markers.</p>
 </section>`);
 
@@ -68,8 +68,8 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
        color: #fff; -webkit-text-stroke: 3pt #000; paint-order: stroke fill; }
   h1 span { font-size: 46pt; }
   .sub { font-size: 24pt; font-weight: 700; margin: 0.1in 0 0.3in; }
-  .title-art { width: 5.2in; }
-  .author { font-size: 16pt; margin-top: 0.3in; }
+  .title-art { width: 4.8in; }
+  .logo { width: 2.6in; margin-top: 0.35in; }
   h2 { font-family: Chewy, sans-serif; font-weight: 400; font-size: 44pt; margin: 0 0 0.3in; }
   .name-line { width: 5in; border-bottom: 3pt solid #000; height: 0.7in; margin-bottom: 0.4in; }
   .belongs-art { width: 5.5in; }

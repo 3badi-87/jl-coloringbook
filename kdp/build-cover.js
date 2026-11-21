@@ -11,7 +11,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const PAGES = +(process.env.PAGES || 46);
-const AUTHOR = process.env.BOOK_AUTHOR || 'Your Name';
+const AUTHOR = process.env.BOOK_AUTHOR || 'Purple Dino';
 const BLEED = 0.125, TW = 8.5, TH = 11;
 const SPINE = +(PAGES * 0.002252).toFixed(4);
 const W = BLEED + TW + SPINE + TW + BLEED, H = TH + 2 * BLEED;
@@ -44,8 +44,10 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
               color: #FF8A3D; -webkit-text-stroke: 2.2pt #2B2B2B; paint-order: stroke fill; letter-spacing: 1pt; }
   .title h1 .amp { color: #6CC25B; }
   .title p { margin: 0.14in 0 0; font-weight: 800; font-size: 24pt; color: #2B2B2B; }
-  .author { position: absolute; left: 0.5in; bottom: 0.5in; background: #fff; border: 0.04in solid #2B2B2B;
-            border-radius: 0.2in; padding: 0.06in 0.2in; font-weight: 800; font-size: 14pt; color: #2B2B2B; }
+  .author { position: absolute; left: 0.45in; bottom: 0.45in; background: #fff; border: 0.04in solid #2B2B2B;
+            border-radius: 0.25in; padding: 0.08in 0.18in; }
+  .author img { display: block; height: 0.62in; }
+  .backlogo { position: absolute; left: 50%; bottom: 0.05in; transform: translateX(-50%); height: 0.55in; }
   /* back */
   .inner { position: absolute; left: ${BLEED + 0.5}in; right: 0.5in; top: ${BLEED + 0.5}in; bottom: ${BLEED + 0.5}in; }
   .inner h2 { margin: 0; text-align: center; font-family: Chewy, sans-serif; font-weight: 400; font-size: 46pt; color: #FF8A3D;
@@ -65,12 +67,13 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
       Big, simple pictures with bold lines, perfect for little hands.</p>
     <div class="samples">${samples.map(f => `<div><img src="${dataUrl(f)}"></div>`).join('')}</div>
     <div class="features">✔ Single-sided pages, no bleed-through<br>✔ Bold, easy lines<br>✔ 8.5 x 11 in large print</div>
+    <img class="backlogo" src="${dataUrl(path.join(__dirname, 'brand', 'logo.png'))}" alt="${AUTHOR}">
     <div class="barcode"></div>
   </div></div>
   <div class="spine"></div>
   <div class="front"><img src="${dataUrl(front)}">
     <div class="title"><h1>Hammy <span class="amp">&amp;</span> Friends</h1><p>A Coloring Book for Kids</p></div>
-    <div class="author">${AUTHOR}</div>
+    <div class="author"><img src="${dataUrl(path.join(__dirname, 'brand', 'logo.png'))}" alt="${AUTHOR}"></div>
   </div>
 </div></body></html>`;
 
