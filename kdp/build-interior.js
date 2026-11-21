@@ -68,7 +68,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   h1 span { font-size: 46pt; }
   .sub { font-size: 24pt; font-weight: 700; margin: 0.1in 0 0.3in; }
   .title-art { width: 4.8in; }
-  .footer { position: absolute; left: 50%; bottom: 0.35in; transform: translateX(-50%); height: 0.42in; }
+  .footer { position: absolute; left: 50%; bottom: 0.27in; transform: translateX(-50%); height: 0.34in; }
   h2 { font-family: Chewy, sans-serif; font-weight: 400; font-size: 44pt; margin: 0 0 0.3in; }
   .name-line { width: 5in; border-bottom: 3pt solid #000; height: 0.7in; margin-bottom: 0.4in; }
   .belongs-art { width: 5in; }
@@ -76,8 +76,8 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   .swatches div { height: 1.1in; border: 2.5pt solid #000; border-radius: 0.2in; }
   .copyright { display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1.1in; font-size: 10.5pt; line-height: 1.5; }
   .copyright p { margin: 0 0 0.12in; max-width: 5.5in; }
-  .art { display: flex; align-items: center; justify-content: center; padding-bottom: 0.95in; }
-  .art .pic { max-width: 100%; max-height: 100%; }
+  .art { display: flex; align-items: center; justify-content: center; padding: 0.45in 0.45in 0.72in; }
+  .art .pic { width: 100%; height: 100%; object-fit: contain; }
 </style></head><body>${pages.join('\n')}</body></html>`;
 
 (async () => {

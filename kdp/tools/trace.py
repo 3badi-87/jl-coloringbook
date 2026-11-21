@@ -22,6 +22,10 @@ def remove_frame(a):
 for f in sorted(glob.glob(os.path.join(SRC, '*.png'))):
     name = os.path.splitext(os.path.basename(f))[0]
     a = remove_frame(np.array(Image.open(f).convert('L')))
+    # trim the empty white margin around the drawing so it can fill the page
+    ys, xs = np.nonzero(a < 150)
+    pad = 6
+    a = a[max(0, ys.min() - pad):ys.max() + pad + 1, max(0, xs.min() - pad):xs.max() + pad + 1]
     im = Image.fromarray(a)
     big = im.resize((im.width * 2, im.height * 2), Image.LANCZOS).filter(ImageFilter.GaussianBlur(1.2))
     pbm = os.path.join('/tmp', name + '.pbm')
