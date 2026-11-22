@@ -73,7 +73,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   </div></div>
   <div class="spine"></div>
   <div class="front"><img class="art" src="${dataUrl(scene)}">
-    <div class="title"><h1>${CFG.titleHtml}</h1><p>${CFG.subtitle}</p></div>
+    <div class="title"><h1>${CFG.titleHtml}</h1><p style="position: relative; left: ${CFG.subtitleShift || '0in'}">${CFG.subtitle}</p></div>
     <img class="pub" src="${dataUrl(path.join(__dirname, 'brand', 'logo.png'))}" alt="${AUTHOR}">
   </div>
 </div></body></html>`;
