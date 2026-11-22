@@ -1,0 +1,14 @@
+{
+  "slug": "hammy-under-the-sea",
+  "title": "Hammy Under the Sea",
+  "titleHtml": "Hammy <span class=\"amp\">Under</span> the Sea",
+  "subtitle": "A Coloring Book for Kids",
+  "belongsArt": "02-sea-turtle.svg",
+  "samples": ["03-dolphin.svg", "04-octopus.svg", "13-stingray.svg", "15-treasure.svg"],
+  "blurb": "Hammy puts on his diving mask and dives under the sea! Swim with a sea turtle, play with a dolphin, meet an octopus, a seahorse family and many more ocean friends. Big, simple pictures with bold lines, perfect for little hands.",
+  "coverArt": "front-pastel.png",
+  "titleBox": "left: 0.5in; right: 0.625in;",
+  "background": "linear-gradient(#D6F0F7 0%, #E3F4F6 45%, #FBEFDF 80%, #F6E3C6 100%)",
+  "spine": "#BFE6EE",
+  "border": false
+}
