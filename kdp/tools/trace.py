@@ -66,6 +66,10 @@ for f in sorted(glob.glob(os.path.join(SRC, '*.png'))):
     from scipy import ndimage
     ink = a < 170
     solid = ndimage.binary_opening(ink, structure=np.ones((3, 3)), iterations=9)
+    lab, n = ndimage.label(solid)
+    if n:
+        sizes = ndimage.sum(solid, lab, range(1, n + 1))
+        solid = np.isin(lab, 1 + np.nonzero(sizes > 15000)[0])
     if solid.any():
         inner = ndimage.binary_erosion(solid, iterations=5)
         a = a.copy(); a[inner] = 255
