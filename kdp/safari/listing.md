@@ -10,11 +10,11 @@
 
 ```html
 <b>Hammy the hamster is going on safari!</b><br><br>
-Grab your explorer hat and join Hammy on 20 friendly adventures across the savanna. Splash with a baby elephant, say hello to a tall giraffe, play ball with a lion cub, race a cheetah cub, share bananas with a baby gorilla, peek at an ostrich egg and end the day around a cozy campfire under the stars.<br><br>
+Grab your explorer hat and join Hammy on 19 friendly adventures across the savanna. Splash with a baby elephant, say hello to a tall giraffe, play ball with a lion cub, race a cheetah cub, share bananas with a baby gorilla, peek at an ostrich egg and end the day around a cozy campfire under the stars.<br><br>
 Every picture has bold, clean lines and big shapes that are easy to color.<br><br>
 <b>What's inside:</b>
 <ul>
-<li>20 original coloring pages starring Hammy and his safari animal friends</li>
+<li>19 original coloring pages starring Hammy and his safari animal friends</li>
 <li>Bold, thick lines and large spaces, perfect for little hands</li>
 <li>Single-sided pages, so markers won't bleed onto the next picture</li>
 <li>A "This book belongs to" page and a "Test Your Colors" page</li>

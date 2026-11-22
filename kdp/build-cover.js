@@ -67,7 +67,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
     <h2>What's inside?</h2>
     <p class="blurb">${CFG.blurb}</p>
     <div class="samples">${samples.map(f => `<div><img src="${dataUrl(f)}"></div>`).join('')}</div>
-    <div class="features">✔ 20 pictures, single-sided pages<br>✔ Bold, easy lines<br>✔ 8.5 x 11 in large print</div>
+    <div class="features">✔ ${fs.readdirSync(path.join(BOOK, 'art')).filter(f => f.endsWith('.svg')).length} pictures, single-sided pages<br>✔ Bold, easy lines<br>✔ 8.5 x 11 in large print</div>
     <img class="backlogo" src="${dataUrl(path.join(__dirname, 'brand', 'logo.png'))}" alt="${AUTHOR}">
     <div class="barcode"></div>
   </div></div>
