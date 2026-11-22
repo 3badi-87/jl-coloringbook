@@ -1,0 +1,13 @@
+{
+  "slug": "hammy-in-safari",
+  "title": "Hammy in Safari",
+  "titleHtml": "Hammy <span class=\"amp\">in</span> Safari",
+  "subtitle": "A Coloring Book for Kids",
+  "belongsArt": "03-giraffe.svg",
+  "samples": ["02-baby-elephant.svg", "05-lion-cub.svg", "07-monkeys.svg", "19-campfire.svg"],
+  "blurb": "Hammy packs his explorer hat and heads off on safari! Meet a baby elephant, giraffes, zebras, a playful lion cub and many more friendly animals. Big, simple pictures with bold lines, perfect for little hands.",
+  "coverArt": "front-pastel.png",
+  "titleBox": "left: 0.7in; right: 2.2in;",
+  "background": "linear-gradient(#C9E4F6 0%, #E4F1F8 40%, #FFF1D8 72%, #F3E2B8 100%)",
+  "spine": "#F2D9A6"
+}

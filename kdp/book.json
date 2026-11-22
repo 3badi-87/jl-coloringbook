@@ -1,0 +1,13 @@
+{
+  "slug": "hammy-and-friends",
+  "title": "Hammy & Friends",
+  "titleHtml": "Hammy <span class=\"amp\">&amp;</span> Friends",
+  "subtitle": "A Coloring Book for Kids",
+  "belongsArt": "04-turtle-ride.svg",
+  "samples": ["02-sunflower-seed.svg", "03-bunny.svg", "04-turtle-ride.svg", "05-owl-night.svg"],
+  "blurb": "Join Hammy the hamster and his animal friends on picnics, turtle rides and starry nights! Big, simple pictures with bold lines, perfect for little hands.",
+  "coverArt": "front-pastel.png",
+  "titleBox": "left: 0.45in; right: 2.55in;",
+  "background": "linear-gradient(#BFE0F7 0%, #D9EEFB 45%, #DDF1CF 75%, #C9E8B4 100%)",
+  "spine": "#B9DCF2"
+}

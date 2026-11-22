@@ -6,7 +6,7 @@ import glob, os, subprocess
 import numpy as np
 from PIL import Image, ImageFilter
 
-D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+D = os.path.abspath(os.environ.get('BOOK') or os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SRC, OUT = os.path.join(D, 'art-src'), os.path.join(D, 'art')
 
 def remove_frame(a):

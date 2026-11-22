@@ -5,9 +5,11 @@ import copy, os
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
 
-D = os.path.dirname(os.path.abspath(__file__))
-cover = PdfReader(os.path.join(D, 'hammy-and-friends-cover.pdf')).pages[0]
-interior = PdfReader(os.path.join(D, 'hammy-and-friends-interior.pdf'))
+import json
+D = os.path.abspath(os.environ.get('BOOK') or os.path.dirname(os.path.abspath(__file__)))
+CFG = json.load(open(os.path.join(D, 'book.json')))
+cover = PdfReader(os.path.join(D, f"{CFG['slug']}-cover.pdf")).pages[0]
+interior = PdfReader(os.path.join(D, f"{CFG['slug']}-interior.pdf"))
 
 pt = 72
 bleed, tw, th = 0.125 * pt, 8.5 * pt, 11 * pt
@@ -24,8 +26,8 @@ out.add_page(crop(W - bleed - tw))   # front cover
 for p in interior.pages:
     out.add_page(p)
 out.add_page(crop(bleed))            # back cover
-out.add_metadata({'/Title': 'Hammy & Friends: A Coloring Book for Kids', '/Author': 'Purple Dino'})
-path = os.path.join(D, 'hammy-and-friends-complete.pdf')
+out.add_metadata({'/Title': f"{CFG['title']}: {CFG['subtitle']}", '/Author': 'RoxoSky Books Co.'})
+path = os.path.join(D, f"{CFG['slug']}-complete.pdf")
 with open(path, 'wb') as f:
     out.write(f)
 print('wrote', path, len(out.pages), 'pages')

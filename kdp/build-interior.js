@@ -1,5 +1,5 @@
-// Builds the Amazon KDP interior PDF for "Hammy & Friends".
-// Usage: node kdp/build-interior.js   (needs Playwright + Chromium)
+// Builds the Amazon KDP interior PDF for a coloring book.
+// Usage: [BOOK=kdp/safari] node kdp/build-interior.js   (needs Playwright + Chromium)
 //
 // Trim 8.5 x 11 in, no bleed (all art sits inside the margins), black & white.
 // Every coloring page is printed on its own sheet with a blank back, so
@@ -10,8 +10,11 @@ const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
 
-const ART = path.join(__dirname, 'art');
-const OUT = path.join(__dirname, 'hammy-and-friends-interior.pdf');
+// BOOK selects the book folder (default: kdp/ itself). It holds book.json, art/ and the outputs.
+const BOOK = path.resolve(process.env.BOOK || __dirname);
+const CFG = JSON.parse(fs.readFileSync(path.join(BOOK, 'book.json'), 'utf8'));
+const ART = path.join(BOOK, 'art');
+const OUT = path.join(BOOK, `${CFG.slug}-interior.pdf`);
 const AUTHOR = process.env.BOOK_AUTHOR || 'RoxoSky Books Co.';
 const LOGO_BW = 'data:image/png;base64,' + fs.readFileSync(path.join(__dirname, 'brand', 'logo-bw.png')).toString('base64');
 // small publisher footer at the bottom of every content page (blank backs stay blank)
@@ -28,13 +31,13 @@ const pages = [];
 pages.push(`<section class="page center">
   <h2>This book belongs to</h2>
   <div class="name-line"></div>
-  <img class="belongs-art" src="${svgData('04-turtle-ride.svg')}">
+  <img class="belongs-art" src="${svgData(CFG.belongsArt)}">
   ${footer}
 </section>`);
 
 // 2. Copyright page (back of page 1)
 pages.push(`<section class="page copyright">
-  <p>Hammy &amp; Friends: A Coloring Book for Kids</p>
+  <p>${CFG.title.replace('&', '&amp;')}: ${CFG.subtitle}</p>
   <p>Published by ${AUTHOR}</p>
   <p>Copyright &copy; ${YEAR} ${AUTHOR}. All rights reserved.</p>
   <p>No part of this book may be reproduced in any form without written permission from the author, except for personal use by the purchaser.</p>
