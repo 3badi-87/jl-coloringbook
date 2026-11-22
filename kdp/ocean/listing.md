@@ -10,12 +10,12 @@
 
 ```html
 <b>Hammy the hamster is diving under the sea!</b><br><br>
-Put on your diving mask and swim along with Hammy on 20 splashy adventures. Ride with a sea turtle, play with a dolphin, wave to an octopus, meet clownfish, seahorses and a giant gentle whale, glide on a stingray, find a treasure chest, explore a sunken ship and build a sandcastle on the sea floor.<br><br>
+Put on your diving mask and swim along with Hammy on 20 splashy adventures. Ride with a sea turtle, play with a dolphin, wave to an octopus, meet clownfish, seahorses and a giant gentle whale, glide on a stingray, meet a friendly little shark and a swordfish, find a treasure chest and build a sandcastle on the sea floor.<br><br>
 Every page has bold, clean lines and big shapes that are easy to color, with friendly ocean animals and happy scenes.<br><br>
 <b>What's inside:</b>
 <ul>
 <li>20 original coloring pages starring Hammy and his ocean friends</li>
-<li>Meet sea turtles, dolphins, octopuses, clownfish, seahorses, crabs, jellyfish, starfish, whales, pufferfish, stingrays and seals</li>
+<li>Meet sea turtles, dolphins, octopuses, clownfish, seahorses, crabs, jellyfish, starfish, whales, pufferfish, stingrays, seals, a little shark and a swordfish</li>
 <li>Bold, thick lines and large spaces, perfect for little hands</li>
 <li>Single-sided pages, so markers won't bleed onto the next picture</li>
 <li>A "This book belongs to" page and a "Test Your Colors" page</li>
